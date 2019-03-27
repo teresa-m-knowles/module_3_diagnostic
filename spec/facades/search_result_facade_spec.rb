@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe MemberSearchResultFacade do
+describe SearchResultFacade do
   it 'exists'do
     zip = '80206'
     result_facade = SearchResultFacade.new(zip)
@@ -15,7 +15,6 @@ describe MemberSearchResultFacade do
         result_facade = SearchResultFacade.new(zip)
 
         expect(result_facade.stations_count).to eq(15)
-
       end
     end
 

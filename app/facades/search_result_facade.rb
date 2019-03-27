@@ -1,9 +1,9 @@
 class SearchResultFacade
 
   attr_reader :zip_code
-  
-  def initialize(attributes)
-    @zip_code = attributes[:zip]
+
+  def initialize(zip)
+    @zip_code = zip
   end
 
   def stations_count
