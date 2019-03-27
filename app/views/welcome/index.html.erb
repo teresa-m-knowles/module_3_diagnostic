@@ -1,1 +1,15 @@
-<%=  facade.stations_count %> Results
+
+15 Results
+
+<ul>
+  <%= facade.stations.each do |station| %>
+    <li class='station'>
+      <p> Name: <%= station.name %> </p>
+      <p> Address: <%= station.address %> </p>
+      <p> Fuel types: <%= station.fuel_types %> </p>
+      <p> Fuel types: <%= station.fuel_types %> </p>
+      <p> Access Times: <%= station.access_times %> </p>
+    </li>
+  <% end %>
+
+</ul>

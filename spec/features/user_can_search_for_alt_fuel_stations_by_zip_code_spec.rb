@@ -15,11 +15,18 @@ RSpec.describe 'User Can Search by Zip Code', type: :feature do
         end
 
         it 'I should see the total results of the stations that match my query' do
-          expect(current_page).to have_content
+          expect(page).to have_content("15 Results")
 
         end
 
         it 'I should see a list of the 15 closest stations within 5 miles sorted by distance' do
+          stations = page.all('.station')
+
+          within 'first(page.all('.station'))' do
+            expect(page).to have_content('Name: PUBLIC STATIONS')
+            expect(page).to have_content('Address: PUBLIC STATIONS')
+            expect(page).to have_content('Fuel Types: PUBLIC STATIONS')
+          end
         end
 
         it 'should only show stations that are Electric and Propane' do
