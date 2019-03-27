@@ -25,7 +25,9 @@ RSpec.describe 'User Can Search by Zip Code', type: :feature do
           within 'first(page.all('.station'))' do
             expect(page).to have_content('Name: PUBLIC STATIONS')
             expect(page).to have_content('Address: PUBLIC STATIONS')
-            expect(page).to have_content('Fuel Types: PUBLIC STATIONS')
+            expect(page).to have_content('Fuel Types: Electric')
+            expect(page).to have_content('Distance: 0.62888 miles')
+            expect(page).to have_content('Access Times: 24 hours daily')
           end
         end
 

@@ -1,4 +1,7 @@
 class SearchResultFacade
+
+  attr_reader :zip_code
+  
   def initialize(attributes)
     @zip_code = attributes[:zip]
   end
