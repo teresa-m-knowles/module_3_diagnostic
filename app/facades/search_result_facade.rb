@@ -11,9 +11,9 @@ class SearchResultFacade
   end
 
   def stations
-    response = service.find_stations(@zip)
-    response.map do |member_data|
-      Member.new(member_data)
+    response = service.get_stations(@zip)
+    response.map do |station_info|
+      Station.new(station_info)
     end
   end
 

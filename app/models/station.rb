@@ -6,11 +6,11 @@ class Station
               :access_times
 
   def initialize(data)
-    @name = name
-    @address = address
-    @fuel_types = fuel_types
-    @distance = distance
-    @access_times = access_times
+    @name = data[:name]
+    @address = data[:address]
+    @fuel_types = data[:fuel_types]
+    @distance = data[:distance]
+    @access_times = data[:access_times]
   end
 
 end
