@@ -4,13 +4,19 @@ RSpec.describe 'User Can Search by Zip Code', type: :feature do
   describe 'As a visitor' do
     describe 'when I visit /' do
       describe 'and I fill in the search form and click on Locate' do
-        it 'should take me to /search' do
+        before :each do
           visit '/'
           fill_in 'q', with: '80206'
-          save_and_open_page
+          click_on "Locate"
+        end
+        it 'should take me to /search' do
+
+          expect(current_path).to eq(search_path)
         end
 
         it 'I should see the total results of the stations that match my query' do
+          expect(current_page).to have_content
+
         end
 
         it 'I should see a list of the 15 closest stations within 5 miles sorted by distance' do
