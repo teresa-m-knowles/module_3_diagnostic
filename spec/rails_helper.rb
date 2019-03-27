@@ -8,11 +8,11 @@ require 'rspec/rails'
 require 'webmock/rspec'
 require 'vcr'
 
-VCR.configure do |config|
-  config.cassette_library_dir = "spec/cassettes"
-  config.hook_into :webmock
-  config.configure_rspec_metadata!
-end
+# VCR.configure do |config|
+#   config.cassette_library_dir = "spec/cassettes"
+#   config.hook_into :webmock
+#   config.configure_rspec_metadata!
+# end
 
 
 
