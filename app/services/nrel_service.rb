@@ -19,8 +19,7 @@ class NRELService
     status = "E"
     access = "public"
     radius = "5"
-    url = "?location=#{location}&fuel_type=#{fuel_type}&status=#{status}&access=#{access}&radius=#{radius}"
-
+    url = "?limit=#{limit}&location=#{location}&fuel_type=#{fuel_type}&status=#{status}&access=#{access}&radius=#{radius}"
     get_json(url)
   end
 end

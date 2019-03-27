@@ -20,11 +20,10 @@ RSpec.describe 'User Can Search by Zip Code', type: :feature do
         end
 
         it 'I should see a list of the 15 closest stations within 5 miles sorted by distance' do
-          stations = page.all('.station')
 
-          within 'first(page.all('.station'))' do
+          within(first(".station")) do
             expect(page).to have_content('Name: PUBLIC STATIONS')
-            expect(page).to have_content('Address: PUBLIC STATIONS')
+            expect(page).to have_content('Address: 2951-2985 E 3rd Ave')
             expect(page).to have_content('Fuel Types: Electric')
             expect(page).to have_content('Distance: 0.62888 miles')
             expect(page).to have_content('Access Times: 24 hours daily')

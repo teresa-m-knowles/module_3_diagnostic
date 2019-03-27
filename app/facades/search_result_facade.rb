@@ -11,7 +11,7 @@ class SearchResultFacade
   end
 
   def stations
-    response = service.get_stations(@zip)
+    response = service.get_stations(@zip_code)[:fuel_stations]
     response.map do |station_info|
       Station.new(station_info)
     end
