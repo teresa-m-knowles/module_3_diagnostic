@@ -31,6 +31,12 @@ RSpec.describe 'User Can Search by Zip Code', type: :feature do
         end
 
         it 'should only show stations that are Electric and Propane' do
+          expect(page).to_not have_content("Fuel Types: Ethanol")
+          expect(page).to_not have_content("Fuel Types: Biodisel")
+          expect(page).to_not have_content("Fuel Types: Compressed Natural Gas")
+          expect(page).to_not have_content("Fuel Types: Hydrogen")
+          expect(page).to_not have_content("Fuel Types: Liquefied Natural Gas")
+
         end
 
         it 'should only show the stations that are public, and not private, planned or temporarily unavailable' do
