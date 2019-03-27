@@ -10,7 +10,7 @@ describe SearchResultFacade do
 
   describe "instance methods" do
     describe "#stations_count" do
-      it "returns the count of members" do
+      it "returns the count of stations" do
         zip = '80206'
         result_facade = SearchResultFacade.new(zip)
 
