@@ -16,8 +16,7 @@ gem 'active_model_serializers'
 
 
 gem 'bcrypt'
-gem 'travis'
-# 
+
 
 group :development, :test do
   gem 'byebug'
